@@ -8,5 +8,13 @@ export default {
     extend: {},
   },
   plugins: [],
+  safelist: [
+    'bg-red-300/50',
+    'border-red-300',
+    'text-red-950',
+    'bg-blue-300/50',
+    'border-blue-300',
+    'text-blue-950',
+  ],
 }
 

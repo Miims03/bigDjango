@@ -12,7 +12,14 @@ class CreateUserView(generics.CreateAPIView):
     serializer_class = UserSerializer
     permission_classes = [(AllowAny)]
 
-class NoteListView(generics.ListAPIView):
+# class NoteCreateView(generics.CreateAPIView):
+#     serializer_class = NoteSerializer
+#     permission_classes = [IsAuthenticated]
+
+#     def perform_create(self, serializer):
+#         serializer.save(author=self.request.user)
+
+class NoteListView(generics.ListCreateAPIView):
     serializer_class = NoteSerializer
     permission_classes = [(IsAuthenticated)]
 
@@ -27,7 +34,6 @@ class NoteListView(generics.ListAPIView):
             print(serializer.errors)
 
 class NoteDelete(generics.DestroyAPIView):
-    queryset = Note.objects.all()
     serializer_class = NoteSerializer
     permission_classes = [(IsAuthenticated)]
 
