@@ -45,7 +45,7 @@ function Home() {
     .then((res) => {
       if(res.status == 201){
         setFlashMessage('Created Successfully')
-        setFlashColor('blue')
+        setFlashColor('purple')
         getNotes()
       } else {
         alert('Failed to create note.')

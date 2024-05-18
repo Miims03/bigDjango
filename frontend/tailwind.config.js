@@ -15,6 +15,9 @@ export default {
     'bg-blue-300/50',
     'border-blue-300',
     'text-blue-950',
+    'bg-purple-300/50',
+    'border-purple-300',
+    'text-purple-950',
   ],
 }
 
